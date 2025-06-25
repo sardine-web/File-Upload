@@ -1,0 +1,12 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $mime = mime_content_type($_FILES['upload']['tmp_name']);
+    if ($mime === 'image/png') {
+        move_uploaded_file($_FILES['upload']['tmp_name'], "files/" . $_FILES['upload']['name']);
+        echo "PNG file uploaded.";
+    } else {
+        echo "Only PNG allowed!";
+    }
+}
+print_r($_FILES);
+?>

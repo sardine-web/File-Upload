@@ -1,0 +1,12 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $filename = $_FILES['upload']['name'];
+    if (str_contains($filename, '.jpg')) {
+        move_uploaded_file($_FILES['upload']['tmp_name'], "files/" . $filename);
+        echo "File uploaded.";
+    } else {
+        echo "Upload only .jpg extension!";
+    }
+}
+print_r($_FILES);
+?>

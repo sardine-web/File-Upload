@@ -1,0 +1,12 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $ext = pathinfo($_FILES['upload']['name'], PATHINFO_EXTENSION);
+    if ($ext === 'svg') {
+        move_uploaded_file($_FILES['upload']['tmp_name'], "files/" . $_FILES['upload']['name']);
+        echo "SVG uploaded.";
+    } else {
+        echo "Only SVG allowed!";
+    }
+}
+print_r($_FILES);
+?>

@@ -1,0 +1,22 @@
+<html>
+<head><title>01 Content Type Check Bypass</title></head>
+<body>
+<h2>01 Content Type Check Bypass</h2>
+<form action="" method="post" enctype="multipart/form-data">
+    <p><input type="file" name="upload"/><input type="submit" value="upload"/></p>
+</form>
+<pre>
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_FILES['upload']['type'] === 'image/jpeg') {
+        move_uploaded_file($_FILES['upload']['tmp_name'], "files/" . $_FILES['upload']['name']);
+        echo "File uploaded.";
+    } else {
+        echo "Only JPEG allowed!";
+    }
+}
+print_r($_FILES);
+?>
+</pre>
+</body>
+</html>

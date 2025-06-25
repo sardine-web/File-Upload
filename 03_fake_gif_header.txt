@@ -1,0 +1,12 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $fileContent = file_get_contents($_FILES['upload']['tmp_name']);
+    if (strpos($fileContent, 'GIF89a') === 0) {
+        move_uploaded_file($_FILES['upload']['tmp_name'], "files/" . $_FILES['upload']['name']);
+        echo "File uploaded as fake image.";
+    } else {
+        echo "Only GIF header files accepted.";
+    }
+}
+print_r($_FILES);
+?>

@@ -1,0 +1,13 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $allowed = ['jpg', 'jpeg'];
+    $ext = strtolower(pathinfo($_FILES['upload']['name'], PATHINFO_EXTENSION));
+    if (in_array($ext, $allowed)) {
+        move_uploaded_file($_FILES['upload']['tmp_name'], "files/" . $_FILES['upload']['name']);
+        echo "File uploaded.";
+    } else {
+        echo "Only JPG/JPEG allowed!";
+    }
+}
+print_r($_FILES);
+?>
