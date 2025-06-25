@@ -230,25 +230,25 @@ Always **analyze server responses**. Sometimes file is renamed but still accessi
 - `Exiftool`, `Magic Bytes`, and `file` command for inspection
 
 ---
-🔬 Lab Usage Instructions
+<h1>🔬 Lab Usage Instructions</h1>
 
-To run and test each vulnerability lab:
+<h2>To run and test each vulnerability lab:</h2>
 
-    Place each .php lab file inside your local PHP server environment such as XAMPP, Laragon, or WAMP under the htdocs directory.
+   Place each .php lab file inside your local PHP server environment such as XAMPP, Laragon, or WAMP under the htdocs directory.
 
-    Create a folder named files in the same directory (this is where uploaded files will be stored).
+   Create a folder named files in the same directory (this is where uploaded files will be stored).
 
-    Open each .php lab page in your browser.
+   Open each .php lab page in your browser.
 
-    Select a file to upload and observe the result.
+   Select a file to upload and observe the result.
 
-    Carefully inspect:
+   Carefully inspect:
 
-        Was the file uploaded?
+        - Was the file uploaded?
 
-        Was the file executed?
+        - Was the file executed?
 
-        Was the upload filter bypassed?
+        - Was the upload filter bypassed?
 ---        
 Happy Hacking! 🐚🔥
 sardine web
