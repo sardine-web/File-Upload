@@ -244,11 +244,11 @@ Always **analyze server responses**. Sometimes file is renamed but still accessi
 
    Carefully inspect:
 
-        - Was the file uploaded?
+   - Was the file uploaded?
 
-        - Was the file executed?
+   - Was the file executed?
 
-        - Was the upload filter bypassed?
+   - Was the upload filter bypassed?
 ---        
 Happy Hacking! 🐚🔥
 sardine web
