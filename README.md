@@ -1,8 +1,6 @@
 
 # 🧨 File Upload Vulnerability Exploitation Cheatsheet
 
----
-
 ## 📍 Where to Find Upload Features
 
 Look for:
@@ -234,3 +232,4 @@ Always **analyze server responses**. Sometimes file is renamed but still accessi
 ---
 
 Happy Hacking! 🐚🔥
+sardine web
